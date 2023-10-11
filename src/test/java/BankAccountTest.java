@@ -20,4 +20,21 @@ public class BankAccountTest {
         assertThat(actual).isEqualTo(expected);
     }
 
+    @Test
+    void canGetLastName(){
+        BankAccount bankAccount = new BankAccount("John", "Doe", 2000, 8, 3, 23333);
+        String actual = bankAccount.getLastName();
+        String expected = "Doe";
+        assertThat(actual).isEqualTo(expected);
+    }
+
+    @Test
+    void canSetLastName(){
+        BankAccount bankAccount = new BankAccount("John", "Doe", 2000, 8, 3, 23333);
+        bankAccount.setLastName("Ajayi");
+        String actual = bankAccount.getLastName();
+        String expected = "Ajayi";
+        assertThat(actual).isEqualTo(expected);
+    }
+
 }
