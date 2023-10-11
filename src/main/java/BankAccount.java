@@ -4,10 +4,10 @@ public class BankAccount {
     private String firstName;
     private String lastName;
     private LocalDate localDate;
-    private Integer accountNumber;
-    private Integer balance;
+    private int accountNumber;
+    private int balance;
 
-    public BankAccount(String firstName, String lastName, LocalDate dateOfBirth, Integer accountNumber){
+    public BankAccount(String firstName, String lastName, LocalDate dateOfBirth, int accountNumber){
         this.firstName = firstName;
         this.lastName = lastName;
 
@@ -40,11 +40,11 @@ public class BankAccount {
         this.localDate = dateOfBirth;
     }
 
-    public Integer getAccountNumber() {
+    public int getAccountNumber() {
         return accountNumber;
     }
 
-    public void setAccountNumber(Integer accountNumber) {
+    public void setAccountNumber(int accountNumber) {
         this.accountNumber = accountNumber;
     }
 
@@ -52,11 +52,15 @@ public class BankAccount {
         this.balance = balance;
     }
 
-    public Integer getBalance() {
+    public int getBalance() {
         return balance;
     }
 
-    public void withdrawal(Integer amount) {
+    public void withdrawal(int amount) {
         this.balance -= amount;
+    }
+
+    public void payInterest() {
+        this.balance *= 1.05;
     }
 }
