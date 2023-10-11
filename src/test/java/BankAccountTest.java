@@ -11,4 +11,13 @@ public class BankAccountTest {
         assertThat(actual).isEqualTo(expected);
     }
 
+    @Test
+    void canSetFirstName(){
+        BankAccount bankAccount = new BankAccount("John", "Doe", 2000, 8, 3, 23333);
+        bankAccount.setFirstName("Emmanuel");
+        String actual = bankAccount.getFirstName();
+        String expected = "Emmanuel";
+        assertThat(actual).isEqualTo(expected);
+    }
+
 }
