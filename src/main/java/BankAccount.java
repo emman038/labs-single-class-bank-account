@@ -47,4 +47,12 @@ public class BankAccount {
     public void setAccountNumber(Integer accountNumber) {
         this.accountNumber = accountNumber;
     }
+
+    public void setBalance(Integer balance) {
+        this.balance = balance;
+    }
+
+    public Integer getBalance() {
+        return balance;
+    }
 }

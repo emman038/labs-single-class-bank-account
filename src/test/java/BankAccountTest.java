@@ -73,4 +73,21 @@ public class BankAccountTest {
         assertThat(actual).isEqualTo(expected);
     }
 
+    @Test
+    void canSetBalance(){
+        BankAccount bankAccount = new BankAccount("John", "Doe", LocalDate.of(2000, 8, 3), 23333);
+        bankAccount.setBalance(10000);
+        Integer actual = bankAccount.getBalance();
+        Integer expected = 10000;
+        assertThat(actual).isEqualTo(expected);
+    }
+
+    @Test
+    void canGetBalance(){
+        BankAccount bankAccount = new BankAccount("John", "Doe", LocalDate.of(2000, 8, 3), 23333);
+        Integer actual = bankAccount.getBalance();
+        Integer expected = 0;
+        assertThat(actual).isEqualTo(expected);
+    }
+
 }
