@@ -39,4 +39,12 @@ public class BankAccount {
     public void setDateOfBirth(LocalDate dateOfBirth){
         this.localDate = dateOfBirth;
     }
+
+    public Integer getAccountNumber() {
+        return accountNumber;
+    }
+
+    public void setAccountNumber(Integer accountNumber) {
+        this.accountNumber = accountNumber;
+    }
 }
