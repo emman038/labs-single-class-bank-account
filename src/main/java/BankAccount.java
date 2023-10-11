@@ -55,4 +55,8 @@ public class BankAccount {
     public Integer getBalance() {
         return balance;
     }
+
+    public void withdrawal(Integer amount) {
+        this.balance -= amount;
+    }
 }

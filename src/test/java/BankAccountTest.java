@@ -90,4 +90,14 @@ public class BankAccountTest {
         assertThat(actual).isEqualTo(expected);
     }
 
+    @Test
+    void canWithdraw(){
+        BankAccount bankAccount = new BankAccount("John", "Doe", LocalDate.of(2000, 8, 3), 23333);
+        bankAccount.setBalance(10000);
+        bankAccount.withdrawal(1000);
+        Integer actual = bankAccount.getBalance();
+        Integer expected = 9000;
+        assertThat(actual).isEqualTo(expected);
+    }
+
 }
