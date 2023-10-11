@@ -3,20 +3,15 @@ import java.time.LocalDate;
 public class BankAccount {
     private String firstName;
     private String lastName;
-    private Integer dateOfBirthYear;
-    private Integer dateOfBirthMonth;
-    private Integer dateOfBirthDay;
+    private LocalDate localDate;
     private Integer accountNumber;
     private Integer balance;
 
-    public BankAccount(String firstName, String lastName, Integer dateOfBirthYear, Integer dateOfBirthMonth, Integer dateOfBirthDay, Integer accountNumber){
+    public BankAccount(String firstName, String lastName, LocalDate dateOfBirth, Integer accountNumber){
         this.firstName = firstName;
         this.lastName = lastName;
 
-        this.dateOfBirthYear = dateOfBirthYear;
-        this.dateOfBirthMonth = dateOfBirthMonth;
-        this.dateOfBirthDay = dateOfBirthDay;
-        LocalDate localDate = LocalDate.of(dateOfBirthYear, dateOfBirthMonth, dateOfBirthDay);
+        this.localDate = dateOfBirth;
 
         this.accountNumber = accountNumber;
         this.balance = 0;
@@ -35,5 +30,13 @@ public class BankAccount {
 
     public void setLastName(String lastName){
         this.lastName = lastName;
+    }
+
+    public LocalDate getDateOfBirth(){
+        return localDate;
+    }
+
+    public void setDateOfBirth(LocalDate dateOfBirth){
+        this.localDate = dateOfBirth;
     }
 }
